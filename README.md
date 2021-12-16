@@ -1,3 +1,3 @@
 # Starbucks
 
-https://ryukevinvin.github.io/Starbucks/
+https://ryukevinn.github.io/Starbucks/

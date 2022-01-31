@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+.row {
+    margin : 0 auto;
+    max-width: 1000px;
+}
+
+legend{ display: none;}
+
+/* 회원가입창 공통 */
+.joinBox {
+    margin-top: 100px;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    /* border: 1px solid red; */
+    padding :30px;
+    vertical-align: middle;
+}
+
+.joinBox h2{position: relative;}
+
+.joinBox h2:after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:60px;
+    right: 60px;
+    bottom: 0 ;
+    border-bottom: 1px solid rgba(0,0,0,0.2)
+}
+
+.joinBox h2,
+.joinBox h3{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.joinBox fieldset{
+    border: none;;
+}
+
+.joinBox table {
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.joinBox table th{
+    background:#d4E9E2;
+    padding: 20px;
+    /* border-radius: 30px; */
+}
+
+.joinBox table th,
+.joinBox table td {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+tr:first-child{
+    border-top : 3px solid rgba(0,0,0,0.2)
+}
+tr:last-child {
+    border-bottom : 3px solid rgba(0,0,0,0.2)
+}
+.joinBox table colgroup>col:first-child {
+    width: 30%
+}
+.joinBox .table1{
+    margin-bottom: 50px;
+}
+.joinBox .table1 span:last-child {
+    margin-left: 30px;
+}
+.joinBox .table2{
+    margin-bottom: 30px;
+}
+
+
+
+/*  */
+
+
+.joinBox input[type=text],
+.joinBox input[type=password]{
+    height: 30px;
+}
+.joinBox input[type=text]{
+    width:100px;
+}
+/* .joinBox p {
+    font-size: 12px;
+    margin-top: 5px;
+} */
+.joinBox table button{
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 10px;
+    padding: 0 8px;
+    background:black;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.joinBox table span{
+    font-size:12px;
+    margin-left: 5px;
+}
+.joinBox #emaildomain{
+    width: 150px;
+}
+.joinBox select{
+    height: 30px;
+}
+.joinBox #hp1,
+.joinBox #hp2{
+    width: 60px;
+}
+.joinBox #birthyear{
+    width: 70px;
+}
+.joinBox #birthmonth,
+.joinBox #birthday{
+    width: 40px;
+}
+.joinBox #location {
+    width: 70px;
+}
+.joinBox .table2 tr:last-child>td>input{
+    margin-left: 10px;
+}
+
+
+/*  */
+
+
+
+.joinBox .btn{
+    text-align:center;
+    height:100px;
+}
+
+.joinBox .btn button{
+    padding: 10px 70px;
+    margin: 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    transition:all 0.4s;
+}
+.joinBox .btn button:first-child{
+    float: left;
+}
+.joinBox .btn button:last-child{
+    float: right;
+}
+
+
+.joinBox .btn button.on {
+    transform: scale(1.05);
+    box-shadow: 10px 3px 10px 5px rgba(0,0,0,0.2);
+    border: 2px solid black;
+}
+
+
+.joinBox .btn button:first-child{
+    background: #00a862;
+    color: white;
+    font-weight: bold;
+}
+
+.joinBox table tbody td> input[type=radio]{
+    margin-left: 10px;
+}
+
+/* footer */
+.footer{
+    box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.2);;
+    background: rgba(211,211,211,0.2);
+    padding: 30px 0;
+    text-align: center;
+}
+

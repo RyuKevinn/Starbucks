@@ -1,120 +1,5 @@
 @charset "utf-8";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style-type: none;
-}
-.blind { position : absolute;
-    width : 1px; height :1px;
-    overflow : hidden;
-text-indent : -9999px;}
-/* 글자 블라인드 처리 값 */
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.cf::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    padding: 0 40px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
-    background-color: white;
-}
-
-/* position : fixed / absolute 속성이 block 요소에 들어 가게 되면 block 요소의 특징인 width 100% 속성값이 사라진다. 그러므로 입력을 따로 해 줘야 한다.  */
-
-#header h1 {
-    float: left;
-    width: 50px;
-    margin-right: 40px;
-    margin-top: 20px;
-}
-
-#header #nav {
-    float: right;
-    width: calc(100% - 90px);
-    position: relative;
-}
-
-#header #nav .depth1>li {
-    display: inline-block;
-}
-
-#header #nav .depth1>li>a {
-    display: inline-block;
-    padding: 40px 0;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-#header #nav .depth1>li+li>a {
-    padding-left: 24px;
-}
-
-#header #nav .membership {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top: -17px;
-}
-
-#header #nav .membership a {
-    font-size: 14px;
-    padding: 6px 16px 8px;
-    border: 1px solid black;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-#header #nav .membership a:first-child {
-    margin-right: 40px;
-    border: none;
-    padding: 7px 0;
-}
-
-#header #nav .membership a:first-child:hover {
-    color: #00754a
-}
-
-#header #nav .membership a:nth-child(2) {
-    margin-right: 16px;
-    transition: all 0.3s;
-}
-
-#header #nav .membership a:nth-child(2):hover {
-    background-color: rgba(0, 0, 0, 0.06);
-}
-
-#header #nav .membership a:last-child {
-    background-color: black;
-    color: white;
-    transition: all 0.3s;
-}
-
-#header #nav .membership a:last-child:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
 
 #main {
     overflow: hidden;
@@ -218,7 +103,6 @@ img {
 #container .rewards .btn a:first-child {
     background-color: black;
     color: white;
-
 }
 
 #container .rewards .btn a:first-child:hover {
@@ -277,7 +161,6 @@ img {
 
 #container .order .order1>div:nth-child(3) a {
     display: block;
-    background-color: #d4e9e2;
     border-radius: 15px;
     position: relative;
     font-size: 19px;
@@ -288,8 +171,13 @@ img {
 
 #container .order .order1>div:nth-child(3) a:first-child {
     margin-bottom: 15px;
+    background:#d4e9e2  url(../img/iced_drink.webp) no-repeat 95% 40px; 
+    background-size: 70px auto; 
 }
-
+#container .order .order1>div:nth-child(3) a:last-child {
+    margin-bottom: 15px;
+    background: #d4e9e2 url(../img/hot_drink.webp) no-repeat 103% -40px;
+}
 
 #container .order .order1>div:nth-child(3) a strong {
     display: block;
@@ -300,7 +188,7 @@ img {
     ;
 }
 
-#container .order .order1>div:nth-child(3) a img {
+/* #container .order .order1>div:nth-child(3) a img {
     position: absolute;
     bottom: -10px;
 }
@@ -313,7 +201,10 @@ img {
 #container .order .order1>div:nth-child(3) a:last-child>img {
     width: 85px;
     right: -10px;
-}
+} */
+
+
+
 
 #container .order .buy>div {
     padding: 24px;
@@ -376,6 +267,10 @@ margin-bottom : 20px;
     transition:all 0.5s;
 }
 
+#container  .company-info .depth1>li.on>a::after{
+    content:'\f077'
+}
+
 #container  .company-info .depth1>li>a:hover::after {
     transform : rotate(-180deg);
 }
@@ -389,8 +284,10 @@ margin-bottom : 20px;
     width : 50px;
     height : 50px;
     border-radius: 50px ;
-    transition : all 0.3s;
+    transition : all 1s;
 } 
+
+
 /* before / after 속성에는 content: ''; 필수 입력 */
 #container  .company-info .depth1>li>a:hover::before{
     background-color: #ddd;
@@ -399,6 +296,10 @@ margin-bottom : 20px;
 #container  .company-info .depth1 .depth2{
     display : none;
 }
+/* #container  .company-info .depth1>li.on .depth2{
+    display : block;
+}  */
+
 
 #container  .company-info .depth1 .depth2 > li{ 
     margin-bottom : 8px;
@@ -412,70 +313,3 @@ margin-bottom : 20px;
     color : rgba(0,0,0,0.58)
 }
 
-#container .footer{
-    padding : 0px 40px 100px;
-}
-
-#container .footer .sns a {
-    display : inline-block;
-    width: 32px;
-    height : 32px;
-    border-radius: 50%;
-    background: black;
-    color:white;
-    font-size : 18px;
-    text-align : center;
-    line-height: 30px;
-    vertical-align: middle;
-    margin-bottom : 20px;
-    position : relative;
-    margin-top : 10px;
-}
-
-#container .footer .sns a::after {
-    content: '';
-    position : absolute;
-    /* width:48px;
-    height : 48px; */
-    border-radius:  50%;
-    background: #ddd;
-    top: 50% ; bottom : 50% ; left:50%; right:50%;
-    /* 가운데 점에서 시작하는 값 */
-    /* top:50%;
-    left :50%; */
-    /* margin-top: -24px;
-    margin-left:-24px; */
-    z-index : -1;
-    transition : all 0.3s;
-}
-
-#container .footer .sns a:hover::after{
-    background : #ddd;
-    top: -8px ; bottom : -8px ; left:-8px; right:-8px;
-    
-}
-
-#container .footer .sns a+a {margin-left : 15px;}
-
-#container .footer .sns a:first-child {
-    width: 32px;
-    height : 32px;
-    font-size : 33px;
-    text-align : center;
-    background:white;
-    color:black;
-}
-
-#container .footer .bmenu li a {
-    font-size : 16px;
-    padding : 8px 0;
-    display : inline-block;
-    margin-bottom : 4px;
-}
-#container .footer .bmenu li a:hover {
-    text-decoration: underline;
-}
-#container .footer .copyright {
-    font-size : 14px;
-    padding:16px 0 ;
-}

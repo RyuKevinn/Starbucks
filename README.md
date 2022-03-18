@@ -1,3 +1,3 @@
 # Starbucks
 
-https://ryukevinn.github.io/Starbucks/
+https://ryukevinn.github.io/jQuery_Starbucks/
